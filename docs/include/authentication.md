@@ -4,12 +4,15 @@
 
 ### Register [POST]
 
-+ Parameters
-
-    + auth_username: `john` (required, string)
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
-
++ Request
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "auth_username": "john",
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 + Response 201
     + Headers
@@ -51,11 +54,14 @@
 
 ### Login [POST]
 
-+ Parameters
-
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
-
++ Request
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 + Response 200
     + Headers

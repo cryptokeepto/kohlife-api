@@ -3,6 +3,12 @@
 ## List [/admin]
 
 ### List [GET]
+
++ Request
+    + Headers
+        Content-Type: application/json
+
+
 + Response 200
     + Headers
 
@@ -50,11 +56,15 @@
 
 ### Create [POST]
 
-+ Parameters
-
-    + auth_username: `john` (required, string)
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
++ Request
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "auth_username": "john",
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 
 + Response 201
@@ -64,7 +74,7 @@
 
 
     + Body
-         {
+        {
             "status": true,
             "message": "Admin created."
         }

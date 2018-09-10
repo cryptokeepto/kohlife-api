@@ -1,8 +1,3 @@
-HOST: http://localhost:3000/api/1.0.0
-
-# Kohlife API
-Kohlife API is provide for developer.
-
 ## Install
 
 1. install nodejs version > 8.0.0

@@ -3,6 +3,10 @@
 ## List [/partners]
 
 ### List [GET]
++ Request
+    + Headers
+        Content-Type: application/json
+
 + Response 200
     + Headers
 
@@ -54,6 +58,10 @@
 
     + partnerId: `9` (required, number)
 
++ Request
+    + Headers
+        Content-Type: application/json
+
 
 + Response 200
     + Headers
@@ -93,11 +101,16 @@
 
 ### Create [POST]
 
-+ Parameters
++ Request
+    + Headers
+        Content-Type: application/json
 
-    + auth_username: `john` (required, string)
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
+    + Body
+        {
+            "auth_username": "john",
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 
 + Response 201
@@ -131,7 +144,15 @@
 + Parameters
 
     + partnerId: `9` (required, number)
-    + auth_password: `new123456` (required, string)
+
++ Request
+    + Headers
+        Content-Type: application/json
+
+    + Body
+        {
+            "auth_password": "new123456"
+        }
 
 
 + Response 200
@@ -166,6 +187,10 @@
 
     + partnerId: `9` (required, number)
 
++ Request
+    + Headers
+        Content-Type: application/json
+
 
 + Response 200
     + Headers
@@ -198,11 +223,19 @@
 
 
 + Parameters
-    + headers: `{ x-access-token: <token> }` (required, string)
     + partnerId: `9` (required, number)
-    + auth_username: `john` (required, string)
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
+
++ Request
+    + Headers
+        Content-Type: application/json
+        x-access-token: <token>
+
+    + Body
+        {
+            "auth_username": "john",
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 
 
@@ -272,8 +305,12 @@
 
 
 + Parameters
-    + headers: `{ x-access-token: <token> }` (required, string)
     + partnerId: `9` (required, number)
+
++ Request
+    + Headers
+        Content-Type: application/json
+        x-access-token: <token>
 
 
 + Response 200
@@ -378,9 +415,13 @@
 ### FindByMemberOfPartner [GET]
 
 + Parameters
-    + headers: `{ x-access-token: <token> }` (required, string)
     + memberIdOfPartner: `18` (required, number)
     + partnerId: `9` (required, number)
+
++ Request
+    + Headers
+        Content-Type: application/json
+        x-access-token: <token>
 
 
 + Response 200
@@ -423,10 +464,18 @@
 
 + Parameters
 
-    + headers: `{ x-access-token: <token> }` (required, string)
     + memberIdOfPartner: `18` (required, number)
     + partnerId: `9` (required, number)
-    + auth_roles: `partner` (required, string)
+
++ Request
+    + Headers
+        Content-Type: application/json
+        x-access-token: <token>
+
+    + Body
+        {
+            "auth_roles": "partner"
+        }
 
 
 + Response 200
@@ -497,9 +546,14 @@
 
 + Parameters
 
-    + headers: `{ x-access-token: <token> }` (required, string)
     + memberIdOfPartner: `18` (required, number)
     + partnerId: `9` (required, number)
+
++ Request
+    + Headers
+        Content-Type: application/json
+        x-access-token: <token>
+
 
 
 + Response 200

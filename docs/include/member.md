@@ -3,6 +3,12 @@
 ## List [/member]
 
 ### List [GET]
+
++ Request
+    + Headers
+        Content-Type: application/json
+
+
 + Response 200
     + Headers
 
@@ -54,6 +60,10 @@
 
     + memberId: `23` (required, number)
 
++ Request
+    + Headers
+        Content-Type: application/json
+
 
 + Response 200
     + Headers
@@ -93,12 +103,15 @@
 
 ### Create [POST]
 
-+ Parameters
-
-    + auth_username: `john` (required, string)
-    + auth_email: `john@domain.com` (required, string)
-    + auth_password: `123456` (required, string)
-
++ Request
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "auth_username": "john",
+            "auth_email": "john@domain.com",
+            "auth_password": "123456"
+        }
 
 + Response 201
     + Headers
@@ -143,7 +156,14 @@
 + Parameters
 
     + memberId: `23` (required, number)
-    + auth_password: `new123456` (required, string)
+
++ Request
+    + Headers
+        Content-Type: application/json
+    + Body
+        {
+            "auth_password": "new123456"
+        }
 
 
 + Response 200
@@ -177,6 +197,10 @@
 + Parameters
 
     + memberId: `23` (required, number)
+
++ Request
+    + Headers
+        Content-Type: application/json
 
 
 + Response 200
